@@ -34,3 +34,7 @@ header {
 nav {
   background: #6D213C;
 }
+
+nav a {
+  color: #FAFF70;
+}
