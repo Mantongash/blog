@@ -12,6 +12,9 @@ app.config["MYSQL_PASSWORD"] = "root"
 app.config["MYSQL_DB"] = "blog"
 app.config["MYSQL_CURSORCLASS"] = "DictCursor"
 
+# Initialize MYSQL
+mysql = MySQL(app)
+
 # routes
 @app.route("/")
 def home():
