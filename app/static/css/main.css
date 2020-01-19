@@ -1,29 +1,31 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Text Styles */
+header h1 {
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+header p {
+  font-size: 2rem;
+}
+
+
+/* Header styles*/
 header {
   height: 60vh;
   display: flex !important;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(rgba(109,33,60, 0.7), rgba(109,33,60, 0.7)),url("../images/blog.jpg") no-repeat center center/cover;
+  background: linear-gradient(rgba(109, 33, 60, 0.7), rgba(109, 33, 60, 0.7)),
+    url("../images/blog.jpg") no-repeat center center/cover;
   color: #fff;
   text-align: center;
   font-family: "Montserrat";
-}
-
-/* Text Styles */
-header h1 {
-font-size: 5rem;
-font-weight: 900;
-  
-}
-
-header p {
-  font-size: 2rem;
 }
