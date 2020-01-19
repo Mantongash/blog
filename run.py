@@ -34,7 +34,21 @@ def signup():
     username = form.username.data
     email= form.email.data
     password = sha256_crypt.encrypt(form.password.data)
+
+    # Cursor
+    cur = mysql.connection.cursor()
+
+    cur.execute("INSERT INTO users(username,email, password) VALUES(%s, %s,%s,%s)", (username, email, password))
   return render_template("signup.html", title="Register", form=form)
+
+  # Commit to DB
+  mysql.connection.commit()
+
+  # Close connection
+  cur.close()
+
+  flash("You have successfully registered and can now log in", "success")
+  return redirect(url_for("index"))
 
 #Sign In route
 @app.route("/signin")
