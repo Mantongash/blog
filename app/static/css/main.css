@@ -29,3 +29,8 @@ header {
   text-align: center;
   font-family: "Montserrat";
 }
+
+/* Nav styles */
+nav {
+  background: #6D213C;
+}
