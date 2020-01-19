@@ -2,7 +2,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField
 from wtforms.validators import DataRequired, Email,EqualTo
 
-class SigninForm(FlaskForm):
+class SignupForm(FlaskForm):
   username = StringField("Username", validators=[DataRequired()])
   email = StringField("email", validators=[DataRequired(),Email()])
   password = PasswordField("Password", validators=[DataRequired()])
