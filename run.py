@@ -15,7 +15,8 @@ def about():
 #Sign Up route
 @app.route("/signup")
 def signup():
-  return render_template("signup.html", title="Register")
+  form = SignupForm()
+  return render_template("signup.html", title="Register", form=form)
 
 #Sign In route
 @app.route("/signin")
