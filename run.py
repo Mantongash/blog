@@ -1,4 +1,4 @@
-from flask import render_template, request, logging, flash, url_for
+from flask import render_template, request, logging, flash, url_for, redirect
 from app import app
 from flask_mysqldb import MySQL
 from passlib.hash import sha256_crypt
