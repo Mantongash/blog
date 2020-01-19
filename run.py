@@ -2,7 +2,7 @@ from flask import render_template
 from app import app
 from app.forms import SigninForm, SignupForm
 
-app.config("SECRET_KEY")="80fa202da9a998f467cd313ce4e64c04"
+app.config["SECRET_KEY"]="80fa202da9a998f467cd313ce4e64c04"
 
 # routes
 @app.route("/")
