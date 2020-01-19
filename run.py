@@ -14,7 +14,12 @@ def about():
 #Sign Up route
 @app.route("/signup")
 def signup():
-  return render_template("signup.html", title="About")
+  return render_template("signup.html", title="Register")
+
+#Sign In route
+@app.route("/signin")
+def signin():
+  return render_template("signin.html", title="Sign In")
 
 if __name__ == "__main__":
   app.run(debug=True)
