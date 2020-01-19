@@ -21,7 +21,8 @@ def signup():
 #Sign In route
 @app.route("/signin")
 def signin():
-  return render_template("signin.html", title="Sign In")
+  form = SignupForm()
+  return render_template("signin.html", title="Sign In", form=form)
 
 if __name__ == "__main__":
   app.run(debug=True)
