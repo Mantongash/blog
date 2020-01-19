@@ -33,7 +33,7 @@ def signup():
   if request.method == "POST" and form.validate():
     username = form.username.data
     email= form.email.data
-    password = form.password.data
+    password = sha256_crypt.encrypt(form.password.data)
   return render_template("signup.html", title="Register", form=form)
 
 #Sign In route
