@@ -48,7 +48,7 @@ def signup():
   cur.close()
 
   flash("You have successfully registered and can now log in", "success")
-  return redirect(url_for("index"))
+  return redirect(url_for("signin"))
 
 #Sign In route
 @app.route("/signin")
