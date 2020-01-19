@@ -55,3 +55,8 @@ form h3 {
   border-bottom: 2px solid #6D213C;
   
 }
+
+.btn {
+  border: 1px solid #6D213C;
+  color: #6D213C;
+}
