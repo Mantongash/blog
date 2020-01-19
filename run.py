@@ -1,8 +1,16 @@
 from flask import render_template, request, logging, flash, url_for
 from app import app
+from flask_mysqldb import MySQL
 from app.forms import SigninForm, SignupForm
 
 app.config["SECRET_KEY"]="80fa202da9a998f467cd313ce4e64c04"
+
+# Config MySQL
+app.config["MYSQL_HOST"] = "localhost"
+app.config["MYSQL_USER"] = "root"
+app.config["MYSQL_PASSWORD"] = "root"
+app.config["MYSQL_DB"] = "blog"
+app.config["MYSQL_CURSORCLASS"] = "DictCursor"
 
 # routes
 @app.route("/")
