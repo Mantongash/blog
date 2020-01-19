@@ -2,5 +2,21 @@
 {% block body %}
   <form action="">
     <h3>Create an Account</h3>
+    <div class="form-group">
+      {{form.username.label(class="input-label")}}
+      {{form.username(class="form-control")}}
+    </div>
+    <div class="form-group">
+      {{form.email.label(class="input-label")}}
+      {{form.email(class="form-control")}}
+    </div>
+    <div class="form-group">
+      {{form.password.label(class="input-label")}}
+      {{form.password(class="form-control")}}
+    </div>
+    <div class="form-group">
+      {{form.confirm_password.label(class="input-label")}}
+      {{form.confirm_password(class="form-control")}}
+    </div>
   </form>
 {% endblock body %}
