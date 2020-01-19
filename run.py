@@ -1,6 +1,7 @@
 from flask import render_template, request, logging, flash, url_for
 from app import app
 from flask_mysqldb import MySQL
+from passlib.hash import sha256_crypt
 from app.forms import SigninForm, SignupForm
 
 app.config["SECRET_KEY"]="80fa202da9a998f467cd313ce4e64c04"
@@ -29,6 +30,10 @@ def about():
 @app.route("/signup", methods=["POST", "GET"])
 def signup():
   form = SignupForm(request.form)
+  if request.method == "POST" and form.validate():
+    username = form.username.data
+    email= form.email.data
+    password = form.password.data
   return render_template("signup.html", title="Register", form=form)
 
 #Sign In route
