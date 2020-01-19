@@ -10,5 +10,5 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: url("../images/blog.jpg") no-repeat center center/cover;
+  background: linear-gradient(rgba(109,33,60, 0.5), rgba(109,33,60, 0.5)),url("../images/blog.jpg") no-repeat center center/cover;
 }
