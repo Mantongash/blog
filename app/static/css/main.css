@@ -15,3 +15,12 @@ header {
   text-align: center;
 }
 
+/* Text Styles */
+header h1 {
+font-size: 5rem;
+  
+}
+
+header p {
+  font-size: 2rem;
+}
