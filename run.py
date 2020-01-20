@@ -33,7 +33,7 @@ def signup():
   if request.method == "POST" and form.validate():
     username = form.username.data
     email= form.email.data
-    password = sha256_crypt.encrypt(form.password.data)
+    password = sha256_crypt.encrypt(str(form.password.data))
 
     # Cursor
     cur = mysql.connection.cursor()
