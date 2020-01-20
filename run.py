@@ -48,16 +48,18 @@ def signup():
 
     flash("You have successfully registered and can now log in", "success")
     return redirect(url_for("signin"))
-    
+
   return render_template("signup.html", title="Register", form=form)
 
 
 
 
 #Sign In route
-@app.route("/signin")
+@app.route("/signin" methods=["POST", "GET"])
 def signin():
   form = SignupForm()
+  if form.validate_on_submit():
+    return "</h1>" + form.username.data + " " + form.password.data + "</h1>"
   return render_template("signin.html", title="Sign In", form=form)
 
 if __name__ == "__main__":
