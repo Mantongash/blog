@@ -55,7 +55,7 @@ def signup():
 
 
 #Sign In route
-@app.route("/signin" methods=["POST", "GET"])
+@app.route("/signin", methods=["POST", "GET"])
 def signin():
   form = SignupForm()
   if form.validate_on_submit():
