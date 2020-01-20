@@ -51,7 +51,7 @@
       {{form.confirm_password.label(class="input-label")}}
       {{form.username.label(class="input-label")}}
       {% if form.confirm_password.errors %}
-        {{form.c(class="form-control is-invalid")}}
+        {{form.confirm_password(class="form-control is-invalid")}}
         <div class="invalid-feedback">
           {% for error in collection in form.username.errors %}
               <span>{{ error }}</span>
