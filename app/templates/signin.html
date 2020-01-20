@@ -1,4 +1,38 @@
 {% extends "base.html" %}
 {% block body %}
-  <p>This is the sign in page</p>
+  <form method="POST" action="">
+    <h3>Create an Account</h3>
+    <div class="form-group">
+      {{form.username.label(class="input-label")}}
+      {% if form.username.errors %}
+        {{form.username(class="form-control is-invalid")}}
+        <div class="invalid-feedback">
+          {% for error in collection in form.username.errors %}
+              <span>{{ error }}</span>
+          {% endfor %}
+          
+        </div>
+      {% else %}
+        {{form.username(class="form-control")}}
+      {% endif %}
+      
+    </div>
+
+    <div class="form-group">
+      {{form.password.label(class="input-label")}}
+      {{form.password.label(class="input-label")}}
+      {% if form.password.errors %}
+        {{form.password(class="form-control is-invalid")}}
+        <div class="invalid-feedback">
+          {% for error in collection in form.password.errors %}
+              <span>{{ error }}</span>
+          {% endfor %}
+          
+        </div>
+      {% else %}
+        {{form.password(class="form-control")}}
+      {% endif %}
+    </div>
+    {{form.submit(class="btn btn-outline-danger")}}
+  </form>
 {% endblock body %}
