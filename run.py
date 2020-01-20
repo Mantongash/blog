@@ -48,8 +48,8 @@ def signup():
 
     flash("You have successfully registered and can now log in", "success")
     return redirect(url_for("signin"))
-  else:
-    return render_template("index.html", title="Register", form=form)
+    
+  return render_template("signup.html", title="Register", form=form)
 
 
 
