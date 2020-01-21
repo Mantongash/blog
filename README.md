@@ -15,7 +15,7 @@ You can find the live link [here](https://pitche.herokuapp.com/)
 
 ## BDD
 ___
-![Pitcher Homepage](pitcher/static/images/pitcher.png)
+![Blogger's Block Homepage](blog/static/images/blogg.png)
 
 1. Sign Up user on entering correct credentials
   - INPUT: "username"
