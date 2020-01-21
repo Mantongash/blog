@@ -60,3 +60,14 @@ form h3 {
   border: 1px solid #6D213C;
   color: #6D213C;
 }
+
+.quote {
+  font-size: 1.3rem;
+  color: #fff;
+}
+.author {
+  font-size: 1rem;
+  font-weight: bolder;
+  font-style: italic;
+  color: #fff;
+}
