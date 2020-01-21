@@ -39,7 +39,8 @@ ___
   - INPUT: "article content"
   - OUTPUT: "article content"
 4. Adding a comment
-  - INPUT: 
+  - INPUT: "comment"
+  - OUTPUT: "comment"
 
 ## Setup Instructions
 ___
@@ -47,47 +48,12 @@ Open the terminal. Move to the directory you want to store the app e.g `cd Deskt
 
 ## Teachnologies Used
 ___
-```asgiref==3.2.3
-astroid==2.3.3
-autopep8==1.4.4
-bcrypt==3.1.7
-blinker==1.4
-cffi==1.13.2
-clear==1.0.1
-Click==7.0
-Django==3.0.2
-Flask==1.1.1
-Flask-Bcrypt==0.7.1
-Flask-Login==0.4.1
-Flask-Mail==0.9.1
-Flask-SQLAlchemy==2.4.1
-Flask-WTF==0.14.2
-goodlogging==1.0.1
-gunicorn==20.0.4
-image==1.5.27
-isort==4.3.21
-itsdangerous==1.1.0
-Jinja2==2.10.3
-lazy-object-proxy==1.4.3
-MarkupSafe==1.1.1
-mccabe==0.6.1
-Pillow==7.0.0
-pycodestyle==2.5.0
-pycparser==2.19
-pylint==2.4.4
-pytz==2019.3
-rarfile==2.7
-requests==2.6.0
-six==1.13.0
-SQLAlchemy==1.3.12
-sqlparse==0.3.0
-typed-ast==1.4.0
-Werkzeug==0.16.0
-wrapt==1.11.2
-WTForms==2.2.1
+```
+HTML and CSS (Bootstrap)
+Python (Flask)  
 ```
 ## Future Plans
-- Add upvote and downvote feature
+- Solve the authentication issue
 - Implement a comment feature
 
 ### License

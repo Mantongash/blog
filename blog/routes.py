@@ -1,6 +1,6 @@
 import os
 import secrets
-from flask import render_template, url_for, flash, redirect, request, abort
+from flask import render_template, url_for, flash, redirect, request
 from blog import app, db, bcrypt
 from blog.models import User, Post
 from blog.forms import SignupForm, SigninForm, UpdateForm, PostForm
@@ -41,23 +41,21 @@ def signup():
     return render_template('signup.html', form=form)
 
 
+
 @app.route('/signin', methods=['GET', 'POST'])
 def signin():
     if current_user.is_authenticated:
-
         return redirect(url_for('home'))
     form = SigninForm()
     if form.validate_on_submit():
         user = User.query.filter_by(email=form.email.data).first()
         if user and bcrypt.check_password_hash(user.password, form.password.data):
-
+            
             # login_user(user, remember=form.remember.data)
             return redirect(url_for('home'))
         else:
-            flash('Login unsuccessful. please confirm email and password.', 'danger')
-
+            flash('Login unsuccessful. please confirm email and password.','danger')
     return render_template('signin.html', form=form)
-
 
 @app.route('/logout')
 def logout():
@@ -78,9 +76,9 @@ def profile():
         db.session.commit()
         flash("Your account has been updated!", 'success')
         return redirect(url_for('profile'))
-    elif request.method == 'GET':
-        form.username.data = current_user.username
-        form.email.data = current_user.email
+    # elif request.method == 'GET':
+    #     form.username.data = current_user.username
+    #     form.email.data = current_user.email
 
     image_file = url_for('static', filename='pics/' + current_user.image_file)
     return render_template('profile.html', title='Profile', image_file=image_file, form=form)
